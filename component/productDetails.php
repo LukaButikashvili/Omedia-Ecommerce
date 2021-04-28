@@ -1,5 +1,5 @@
 <main>
-    <img src=<?php echo "/Omedia-Ecommerce/" . $image_link ?> alt="">
+    <img src="<?php echo "/Omedia-Ecommerce" . $image_link ?>" alt="">
     <div>
         <h1><?php echo $name ?></h1>
         <p><strong><?php echo $price ?></strong></p>
