@@ -1,0 +1,12 @@
+main {
+  display: flex;
+}
+
+main img {
+  width: 30%;
+}
+
+main div {
+  display: flex;
+  flex-direction: column;
+}

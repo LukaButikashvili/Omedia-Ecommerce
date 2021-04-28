@@ -1,0 +1,13 @@
+article {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+article img {
+  width: 100%;
+}
+
+article h6 {
+  margin-bottom: 0;
+}
