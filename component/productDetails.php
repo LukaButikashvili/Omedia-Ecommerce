@@ -15,6 +15,9 @@
                 <p><strong>ROM: </strong><?php echo $rom ?></p>
             </div>
         </div>
+        <?php 
+            include_once './editData/buttons.php';
+        ?>
         <h2>Reviews:</h2>
     </div>
 </main>
