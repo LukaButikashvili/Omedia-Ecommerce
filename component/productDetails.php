@@ -1,5 +1,5 @@
 <main class="productDetails">
-    <img src=<?php echo "/Omedia-Ecommerce/" . $image_link ?> alt="">
+    <img src="<?php echo "/Omedia-Ecommerce" . $image_link ?>" alt="">
     <div id="flex-container">
         <h1><?php echo $name ?></h1>
         <p><em id="brand"><?php echo $brand . " ●" ?></em><strong id="price"><?php echo $price ?></strong></p>
