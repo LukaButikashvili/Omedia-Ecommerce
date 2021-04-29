@@ -18,6 +18,7 @@ $phone = $data['phones'][$id]
     <link rel="stylesheet" href="product.css">
     <link rel="stylesheet" href="component/productDetails.css">
     <link rel="stylesheet" href="component/myHeader.css">
+    <link rel="stylesheet" href="component/footer.css">
 </head>
 
 <body>
@@ -34,6 +35,7 @@ $phone = $data['phones'][$id]
         'ram' => $phone['RAM Memory'],
         'rom' => $phone['ROM Memory'],
     ]) ?>
+    <?php include_template("footer.php") ?>
 </body>
 
 </html>

@@ -15,6 +15,7 @@ $data = include_product_data();
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="component/productCard.css">
     <link rel="stylesheet" href="component/myHeader.css">
+    <link rel="stylesheet" href="component/footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -56,6 +57,7 @@ $data = include_product_data();
             ) ?>
         <?php endforeach; ?>
     </main>
+    <?php include_template("footer.php") ?>
 </body>
 
 </html>

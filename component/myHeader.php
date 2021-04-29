@@ -6,7 +6,7 @@
                 <li>Home</li>
             </a>
             <li>Basket</li>
-            <li>Profile</li>
+            <li>Log In</li>
         </ul>
     </div>
 </header>

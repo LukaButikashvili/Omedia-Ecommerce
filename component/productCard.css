@@ -3,6 +3,7 @@
   flex-direction: column;
   text-align: center;
   font-size: 20px;
+  height: 45vh;
 }
 
 .productCard img {
@@ -11,6 +12,7 @@
 
 .productCard h6 {
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 .productCard a {
@@ -20,4 +22,8 @@
 
 .productCard a:hover {
   color: #f53a33;
+}
+
+.productCard p {
+  margin-top: 5px;
 }

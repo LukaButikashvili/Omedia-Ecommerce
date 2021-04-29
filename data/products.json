@@ -11,7 +11,7 @@
             "GPU": "Apple GPU (4-core graphics)",
             "RAM Memory": "4 GB",
             "ROM Memory": "64 GB",
-            "Price": "2 629 ₾"
+            "Price": "2 629 $"
         },
         {
             "id": 2,
@@ -24,7 +24,7 @@
             "GPU": "Mali-G78 MP14",
             "RAM Memory": "12 GB",
             "ROM Memory": "256 GB",
-            "Price": "4 199 ₾"
+            "Price": "4 199 $"
         },
         {
             "id": 3,
@@ -37,7 +37,7 @@
             "GPU": "Apple GPU (4-core graphics)",
             "RAM Memory": "6 GB",
             "ROM Memory": "128 GB",
-            "Price": "4 499 ₾"
+            "Price": "4 499 $"
         },
         {
             "id": 4,
@@ -50,7 +50,7 @@
             "GPU": "Adreno 650",
             "RAM Memory": "8 GB",
             "ROM Memory": "128 GB",
-            "Price": "2 599 ₾"
+            "Price": "2 599 $"
         },
         {
             "id": 5,
@@ -63,7 +63,7 @@
             "GPU": "Adreno 620",
             "RAM Memory": "6 GB",
             "ROM Memory": "128 GB",
-            "Price": "2 199 ₾"
+            "Price": "2 199 $"
         },
         {
             "id": 6,
@@ -76,7 +76,7 @@
             "GPU": "Adreno 650",
             "RAM Memory": "8 GB",
             "ROM Memory": "128 GB",
-            "Price": "1 689 ₾"
+            "Price": "1 689 $"
         },
         {
             "id": 7,
@@ -89,7 +89,7 @@
             "GPU": "Mali-G78 MP14",
             "RAM Memory": "12 GB",
             "ROM Memory": "256 GB",
-            "Price": "4 199 ₾"
+            "Price": "4 199 $"
         },
         {
             "id": 8,
@@ -102,7 +102,7 @@
             "GPU": "Apple GPU (4-core graphics)",
             "RAM Memory": "4 GB",
             "ROM Memory": "64 GB",
-            "Price": "2 629 ₾"
+            "Price": "2 629 $"
         },
         {
             "id": 9,
@@ -115,7 +115,7 @@
             "GPU": "Mali-G77 MP11",
             "RAM Memory": "8 GB",
             "ROM Memory": "128  GB",
-            "Price": "1 999 ₾"
+            "Price": "1 999 $"
         },
         {
             "id": 10,
@@ -128,7 +128,7 @@
             "GPU": "Mali-G76 MP16",
             "RAM Memory": "8 GB",
             "ROM Memory": "128 GB",
-            "Price": "2 599 ₾"
+            "Price": "2 599 $"
         }
     ]
 }

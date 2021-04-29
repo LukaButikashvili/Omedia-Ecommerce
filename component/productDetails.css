@@ -6,11 +6,26 @@
   width: 35%;
 }
 
-.productDetails div {
+#flex-container {
   display: flex;
   flex-direction: column;
 }
 
-.productDetails em {
-  font-size: 20px;
+#flex-horizontal-container {
+  display: flex;
+  width: 80%;
+}
+#brand {
+  font-size: 25px;
+}
+
+#price {
+  font-size: 25px;
+  margin-left: 10px;
+  color: #f53a33;
+}
+
+.column {
+  width: 50%;
+  display: inline-block;
 }
