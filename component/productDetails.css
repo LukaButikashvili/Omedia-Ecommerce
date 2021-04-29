@@ -1,12 +1,16 @@
-main {
+.productDetails {
   display: flex;
 }
 
-main img {
-  width: 30%;
+.productDetails img {
+  width: 35%;
 }
 
-main div {
+.productDetails div {
   display: flex;
   flex-direction: column;
+}
+
+.productDetails em {
+  font-size: 20px;
 }
