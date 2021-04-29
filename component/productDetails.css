@@ -1,12 +1,31 @@
-main {
+.productDetails {
   display: flex;
 }
 
-main img {
-  width: 30%;
+.productDetails img {
+  width: 35%;
 }
 
-main div {
+#flex-container {
   display: flex;
   flex-direction: column;
+}
+
+#flex-horizontal-container {
+  display: flex;
+  width: 80%;
+}
+#brand {
+  font-size: 25px;
+}
+
+#price {
+  font-size: 25px;
+  margin-left: 10px;
+  color: #f53a33;
+}
+
+.column {
+  width: 50%;
+  display: inline-block;
 }

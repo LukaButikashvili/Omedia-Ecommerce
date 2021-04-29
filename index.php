@@ -1,7 +1,6 @@
 <?php
 include './common/include.php';
 include_once './common/functions.php';
-include_template('header.php', ['name' => 'Home'], true);
 $data = include_product_data();
 ?>
 
@@ -15,9 +14,14 @@ $data = include_product_data();
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="component/productCard.css">
+    <link rel="stylesheet" href="component/myHeader.css">
+    <link rel="stylesheet" href="component/footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <?php include_template("myHeader.php") ?>
     <!--  <section>
         <div>
             <label for="brand">Brand:</label>
@@ -53,6 +57,7 @@ $data = include_product_data();
             ) ?>
         <?php endforeach; ?>
     </main>
+    <?php include_template("footer.php") ?>
 </body>
 
 </html>
