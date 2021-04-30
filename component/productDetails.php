@@ -1,50 +1,48 @@
 <section class="section-content padding-y bg">
-    <div class="container">
-      <div class="card">
-        <div class="row no-gutters">
-          <aside class="col-md-6">
-            <article class="gallery-wrap">
-              <div class="img-big-wrap">
-                <a href="#" style="margin-top: 50px;"><img
-                    src="<?php echo "/Omedia-Ecommerce" . $image_link ?>"
-                    style="height: 500px;"></a>
-              </div>
-            </article> 
-          </aside>
-          <main class="col-md-6 border-left">
-            <article class="content-body">
+  <div class="container">
+    <div class="card">
+      <div class="row no-gutters">
+        <aside class="col-md-6">
+          <article class="gallery-wrap">
+            <div class="img-big-wrap">
+              <a href="#" style="margin-top: 50px;"><img src="<?php echo "/Omedia-Ecommerce" . $image_link ?>" style="height: 500px;"></a>
+            </div>
+          </article>
+        </aside>
+        <main class="col-md-6 border-left">
+          <article class="content-body">
 
-              <h2 class="title"><?php echo $name ?></h2>
-              <div class="mb-3">
-                <h4 class="price"><?php echo $price . " ₾"?></h4>
-              </div>
-              <dl class="row">
-                <dt class="col-sm-3">Brand</dt>
-                <dd class="col-sm-9"><?php echo $brand ?></dd>
+            <h2 class="title"><?php echo $name ?></h2>
+            <div class="mb-3">
+              <h4 class="price"><?php echo $price . " ₾" ?></h4>
+            </div>
+            <dl class="row">
+              <dt class="col-sm-3">Brand</dt>
+              <dd class="col-sm-9"><?php echo $brand ?></dd>
 
-                <dt class="col-sm-3">Release Date</dt>
-                <dd class="col-sm-9"><?php echo $release_date ?></dd>
+              <dt class="col-sm-3">Release Date</dt>
+              <dd class="col-sm-9"><?php echo $release_date ?></dd>
 
-                <dt class="col-sm-3">OS</dt>
-                <dd class="col-sm-9"><?php echo $os ?></dd>
+              <dt class="col-sm-3">OS</dt>
+              <dd class="col-sm-9"><?php echo $os ?></dd>
 
-                <dt class="col-sm-3">CPU</dt>
-                <dd class="col-sm-9"><?php echo $cpu ?></dd>
+              <dt class="col-sm-3">CPU</dt>
+              <dd class="col-sm-9"><?php echo $cpu ?></dd>
 
-                <dt class="col-sm-3">GPU</dt>
-                <dd class="col-sm-9"><?php echo $gpu ?></dd>
+              <dt class="col-sm-3">GPU</dt>
+              <dd class="col-sm-9"><?php echo $gpu ?></dd>
 
-                <dt class="col-sm-3">RAM</dt>
-                <dd class="col-sm-9"><?php echo $ram ?></dd>
+              <dt class="col-sm-3">RAM</dt>
+              <dd class="col-sm-9"><?php echo $ram ?></dd>
 
-                <dt class="col-sm-3">ROM</dt>
-                <dd class="col-sm-9"><?php echo $rom ?></dd>
-              </dl>
-              <hr>
-              <a href="#" class="btn  btn-primary"> Add to cart </a>
-            </article>
-          </main>
-        </div>
+              <dt class="col-sm-3">ROM</dt>
+              <dd class="col-sm-9"><?php echo $rom ?></dd>
+            </dl>
+            <hr>
+            <a href="#" class="btn  btn-primary"> Add to cart </a>
+          </article>
+        </main>
       </div>
     </div>
-  </section>
+  </div>
+</section>

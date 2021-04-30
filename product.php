@@ -32,18 +32,46 @@ foreach ($data['phones'] as $item) {
     }
 }
 ?>
-    <?php include_template('productDetails.php', [
-        'image_link' => $phone['img'],
-        'name' => $phone['name'],
-        'price' => $phone['Price'],
-        'brand' => $phone['brand'],
-        'release_date' => $phone['Release-Date'],
-        'os' => $phone['Operating System'],
-        'cpu' => $phone['CPU'],
-        'gpu' => $phone['GPU'],
-        'ram' => $phone['RAM Memory'],
-        'rom' => $phone['ROM Memory'],
-    ]) ?>
+<?php include_template('productDetails.php', [
+    'image_link' => $phone['img'],
+    'name' => $phone['name'],
+    'price' => $phone['Price'],
+    'brand' => $phone['brand'],
+    'release_date' => $phone['Release-Date'],
+    'os' => $phone['Operating System'],
+    'cpu' => $phone['CPU'],
+    'gpu' => $phone['GPU'],
+    'ram' => $phone['RAM Memory'],
+    'rom' => $phone['ROM Memory'],
+]) ?>
+
+<section class="section-content padding-y bg">
+    <div class="container">
+        <h4>Reviews:</h4>
+        <?php if (isset($phone['review'])) : ?>
+            <?php foreach ($phone['review'] as $review) : ?>
+                <article class="box mb-3">
+                    <div>
+                        <p>
+                            <?php echo $review ?>
+                        </p>
+                    </div>
+                </article>
+                <p>
+                <?php endforeach; ?>
+            <?php else : ?>
+                <h5 class="text-center"><em>No Reviews Yet!</em></h5>
+            <?php endif; ?>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Write a Review</span>
+                </div>
+                <textarea class="form-control" aria-label="With textarea" name="review" id="review"></textarea>
+                <button class="btn btn-outline-secondary" type="button" id="submitReview">Submit</button>
+            </div>
+    </div>
+    </div>
+</section>
 <?php
 include './component/html_end.php'
 ?>
