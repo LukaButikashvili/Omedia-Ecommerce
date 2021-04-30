@@ -1,13 +1,13 @@
-<article class="productCard" id=<?php echo $id ?>>
-    <a href=<?php echo "product.php?id=" . $id ?>>
-        <img src="<?php echo "/Omedia-Ecommerce" . $image_link ?>">
-        <h6><?php echo $phone_name ?></h6>
-        <p>
-            <em>
-                <strong>
-                    <?php echo $phone_price ?>
-                </strong>
-            </em>
-        </p>
+
+
+<div class="col-md-3">
+    <a href="<?php echo "product.php?id=" . $id ?>">
+    <figure class="card card-product-grid">
+        <div class="img-wrap"> <img src="<?php echo "/Omedia-Ecommerce" . $image_link ?>"> </div>
+        <figcaption class="info-wrap border-top">
+            <p class="title" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"><?php echo $phone_name ?></p>
+            <div class="price mt-2"><?php echo $phone_price . " ₾"?></div> <!-- price-wrap.// -->
+        </figcaption>
+    </figure> <!-- card // -->
     </a>
-</article>
+</div>

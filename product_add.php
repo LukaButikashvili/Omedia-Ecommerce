@@ -13,7 +13,9 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-sm">
+    <div class="card">
+        <div class="card-body">
         <form method="post">
             <div class="form-group">
                 <label for="phoneName">Phone Name</label>
@@ -53,6 +55,8 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+    </div>
+    </div>
     </div>
 </body>
 

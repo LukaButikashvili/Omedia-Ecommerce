@@ -38,3 +38,15 @@ function include_product_data()
     $product_data = json_decode(file_get_contents($path), true);
     return $product_data;
 }
+
+// checks if product exists
+function getProductById($id)
+{
+    $data = include_product_data();
+    foreach ($data['phones'] as $item) {
+        if ($item['id'] == $id) {
+            return $data;
+        }
+    }
+    return null;
+}
