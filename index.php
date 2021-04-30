@@ -12,21 +12,6 @@ include './component/navbar.php';
 ?>
 
 <div class="container">
-    <div class="filter">
-        <label for="brand">
-            <p>Filter:</p>
-        </label>
-        <select name="brand" id="brand">
-            <option value="All">All</option>
-            <option value="Apple">Apple</option>
-            <option value="Samsung">Samsung</option>
-            <option value="Google">Google</option>
-            <option value="OnePlus">OnePlus</option>
-            <option value="Xiaomi">Xiaomi</option>
-            <option value="Huawei">Huawei</option>
-        </select>
-        <button id="submit">Ok</button>
-    </div>
     <div class="row">
         <?php foreach ($data['phones'] as $item) : ?>
             <?php include_template(
