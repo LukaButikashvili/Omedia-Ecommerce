@@ -16,8 +16,6 @@
     $updated_data = ["phones" => $new_array];
     $convert_array_to_json = json_encode($updated_data);
 
-    var_dump($convert_array_to_json);
-
     //upload new data to the json file
     file_put_contents('../../data/products.json', $convert_array_to_json);
 
