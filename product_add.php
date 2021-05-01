@@ -14,49 +14,56 @@
 
 <body>
     <div class="container-sm">
-    <div class="card">
-        <div class="card-body">
-        <form method="post">
-            <div class="form-group">
-                <label for="phoneName">Phone Name</label>
-                <input type="text" name="phoneName" class="form-control" id="phoneName">
+        <div class="card">
+            <div class="card-body">
+                <form action="upload-manager.php" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="phoneName">Upload Photo</label>
+                        <input type="file"
+                            id="fileSelect" name="photo"
+                        >
+                        <p><strong>Note:</strong> Only .jpg, .jpeg, .gif, .png formats allowed to a max size of 5 MB.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneName">Phone Name</label>
+                        <input type="text" name="name" class="form-control" id="phoneName">
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneBrand">Brand</label>
+                        <input type="text" name="brand" class="form-control" id="phoneBrand">
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneBrand">Price</label>
+                        <input type="number" name="Price" class="form-control" id="phoneBrand">
+                    </div>
+                    <div class="form-group">
+                        <label for="releaseDate">Year</label>
+                        <input type="text" name="Release-Date" class="form-control" id="releaseDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="os">Operating System</label>
+                        <input type="text" name="Operating System" class="form-control" id="os">
+                    </div>
+                    <div class="form-group">
+                        <label for="cpu">CPU</label>
+                        <input type="text" name="CPU" class="form-control" id="cpu">
+                    </div>
+                    <div class="form-group">
+                        <label for="gpu">GPU</label>
+                        <input type="text" name="GPU" class="form-control" id="gpu">
+                    </div>
+                    <div class="form-group">
+                        <label for="ram">RAM Memory</label>
+                        <input type="number" name="RAM Memory" class="form-control" id="ram">
+                    </div>
+                    <div class="form-group">
+                        <label for="rom">ROM Memory</label>
+                        <input type="number" name="ROM Memory" class="form-control" id="rom">
+                    </div>
+                    <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="phoneBrand">Brand</label>
-                <input type="text" name="phoneBrand" class="form-control" id="phoneBrand">
-            </div>
-            <div class="form-group">
-                <label for="phoneBrand">Price</label>
-                <input type="number" name="phoneBrand" class="form-control" id="phoneBrand">
-            </div>
-            <div class="form-group">
-                <label for="releaseDate">Brand</label>
-                <input type="text" name="releaseDate" class="form-control" id="releaseDate">
-            </div>
-            <div class="form-group">
-                <label for="os">Operating System</label>
-                <input type="text" name="os" class="form-control" id="os">
-            </div>
-            <div class="form-group">
-                <label for="cpu">CPU</label>
-                <input type="text" name="cpu" class="form-control" id="cpu">
-            </div>
-            <div class="form-group">
-                <label for="gpu">GPU</label>
-                <input type="text" name="gpu" class="form-control" id="gpu">
-            </div>
-            <div class="form-group">
-                <label for="ram">RAM Memory</label>
-                <input type="text" name="ram" class="form-control" id="ram">
-            </div>
-            <div class="form-group">
-                <label for="rom">ROM Memory</label>
-                <input type="text" name="rom" class="form-control" id="rom">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </div>
-    </div>
+        </div>
     </div>
 </body>
 

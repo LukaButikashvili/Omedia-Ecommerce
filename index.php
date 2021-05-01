@@ -11,8 +11,12 @@ include './component/html_head.php';
 include './component/navbar.php';
 ?>
 
-<div class="container">
-    <div class="row">
+
+<div class="container mt-2">
+    <a href="/Omedia-Ecommerce/product_add.php" class="d-flex justify-content-end">
+        <button class="btn btn-success">Add Product</button>
+    </a>
+    <div class="row mt-2">
         <?php foreach ($data['phones'] as $item) : ?>
             <?php include_template(
                 'productCard.php',

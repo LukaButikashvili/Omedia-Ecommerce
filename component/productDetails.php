@@ -12,34 +12,40 @@
         <main class="col-md-6 border-left">
           <article class="content-body">
 
-            <h2 class="title"><?php echo $name ?></h2>
+            <h2 class="title" id="name"><?php echo $name ?></h2>
             <div class="mb-3">
-              <h4 class="price"><?php echo $price . " ₾" ?></h4>
+              <h4 class="price" id="Price"><?php echo $price . " ₾" ?></h4>
             </div>
             <dl class="row">
               <dt class="col-sm-3">Brand</dt>
-              <dd class="col-sm-9"><?php echo $brand ?></dd>
+              <dd class="col-sm-9" id="brand"><?php echo $brand ?></dd>
 
               <dt class="col-sm-3">Release Date</dt>
-              <dd class="col-sm-9"><?php echo $release_date ?></dd>
+              <dd class="col-sm-9" id="Release-Date"><?php echo $release_date ?></dd>
 
               <dt class="col-sm-3">OS</dt>
-              <dd class="col-sm-9"><?php echo $os ?></dd>
+              <dd class="col-sm-9" id="Operating_System"><?php echo $os ?></dd>
 
               <dt class="col-sm-3">CPU</dt>
-              <dd class="col-sm-9"><?php echo $cpu ?></dd>
+              <dd class="col-sm-9" id="CPU"><?php echo $cpu ?></dd>
 
               <dt class="col-sm-3">GPU</dt>
-              <dd class="col-sm-9"><?php echo $gpu ?></dd>
+              <dd class="col-sm-9" id="GPU"><?php echo $gpu ?></dd>
 
               <dt class="col-sm-3">RAM</dt>
-              <dd class="col-sm-9"><?php echo $ram ?></dd>
+              <dd class="col-sm-9" id="RAM_Memory"><?php echo $ram ?></dd>
 
               <dt class="col-sm-3">ROM</dt>
-              <dd class="col-sm-9"><?php echo $rom ?></dd>
+              <dd class="col-sm-9" id="ROM_Memory"><?php echo $rom ?></dd>
             </dl>
             <hr>
-            <a href="#" class="btn  btn-primary"> Add to cart </a>
+            <a href="#">
+              <button class="btn  btn-primary" id="addToCart">Add to cart</button>
+            </a>
+            <?php 
+              include_once './editData/buttons.php';
+            ?>
+            <!-- <a href="#" class="btn  btn-primary" id="addToChart"> Add to cart </a> -->
           </article>
         </main>
       </div>
