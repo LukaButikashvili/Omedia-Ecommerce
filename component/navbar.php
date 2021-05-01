@@ -24,14 +24,14 @@
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <!-- logic is missing :) I am going to add it after login/register system is done/ Lekso -->
-              <?php if(2> 3):?>
+              <?php if(isset($_SESSION['username'])):?>
                 <a class="dropdown-item" href="#">Profile</a>
                 <a class="dropdown-item" href="#">Account settings</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Sign out</a>
+                <a class="dropdown-item" href="<?php echo ('/Omedia-Ecommerce/' . "signout.php") ?>">Sign out</a>
               <?php else: ?>
-                <a class="dropdown-item" href="#">Sign in</a>
-                <a class="dropdown-item" href="#">Sign up</a>
+                <a class="dropdown-item" href="<?php echo ('/Omedia-Ecommerce/' . "login.php") ?>">Sign in</a>
+                <a class="dropdown-item" href="<?php echo ('/Omedia-Ecommerce/' . "register.php") ?>">Sign up</a>
               <?php endif?>
               </div>
             </li>
@@ -39,4 +39,4 @@
         </div>
       </div>
     </nav>
-    </header><!-- section-header.// -->
+    </header>

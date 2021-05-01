@@ -6,8 +6,8 @@
         <div class="img-wrap"> <img src="<?php echo "/Omedia-Ecommerce" . $image_link ?>"> </div>
         <figcaption class="info-wrap border-top">
             <p class="title" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"><?php echo $phone_name ?></p>
-            <div class="price mt-2"><?php echo $phone_price . " ₾"?></div> <!-- price-wrap.// -->
+            <div class="price mt-2"><?php echo $phone_price . " ₾"?></div>
         </figcaption>
-    </figure> <!-- card // -->
+    </figure>
     </a>
 </div>

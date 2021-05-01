@@ -40,6 +40,12 @@
             </dl>
             <hr>
             <a href="#" class="btn  btn-primary"> Add to cart </a>
+            <?php if($_SESSION['type'] == 'admin'){
+              include './editData/buttons.php';
+
+            }
+            ?>
+              
           </article>
         </main>
       </div>
