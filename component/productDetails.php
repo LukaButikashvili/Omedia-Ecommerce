@@ -39,16 +39,17 @@
               <dd class="col-sm-9" id="ROM_Memory"><?php echo $rom ?></dd>
             </dl>
             <hr>
-            <a href="#">
-              <button class="btn  btn-primary" id="addToCart">Add to cart</button>
-            </a>
-            <!-- <a href="#" class="btn  btn-primary"> Add to cart </a> -->
-            <?php 
-            if(isset($_SESSION['type']) && $_SESSION['type'] == 'admin') {
-              include './editData/buttons.php';
+            <form method="POST" action="">
+              <input type="hidden" name="product_id" value="<?php echo $_GET['id'] ?>">
+              <button class="btn  btn-primary" name="add" type="submit"> Add to cart</button>
+            </form>
+            <?php
+            if (isset($_SESSION['type'])) {
+              if ($_SESSION['type'] == 'admin') {
+                include './editData/buttons.php';
+              }
             }
             ?>
-              
           </article>
         </main>
       </div>
