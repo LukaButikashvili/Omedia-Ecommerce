@@ -1,5 +1,8 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
 session_start();
+$_SESSION['cart'] = $_SESSION['cart'] ?? [];
 include './component/html_head.php';
 include './component/navbar.php';
 ?>
@@ -32,7 +35,12 @@ foreach ($data['phones'] as $item) {
         $phone = $item;
     }
 }
+
+if (isset($_POST["add"])) {
+    $cart_element =& $_SESSION['cart'][$_POST['product_id']];
+ }
 ?>
+
 <?php include_template('productDetails.php', [
     'image_link' => $phone['img'],
     'name' => $phone['name'],
@@ -50,5 +58,7 @@ include './component/review_form.php'
 ?>
 
 <?php
-include './component/html_end.php'
+include './component/html_end.php';
+// print_r($phone["id"]);
+// echo $_GET['id']
 ?>

@@ -11,6 +11,7 @@ include './component/html_head.php';
 include './component/navbar.php';
 ?>
 
+
 <div class="container">
     <div class="row">
         <?php foreach ($data['phones'] as $item) : ?>
