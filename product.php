@@ -47,11 +47,12 @@ if (isset($_POST["add"])) {
     'price' => $phone['Price'],
     'brand' => $phone['brand'],
     'release_date' => $phone['Release-Date'],
-    'os' => $phone['Operating System'],
+    'os' => $phone['Operating_System'],
     'cpu' => $phone['CPU'],
     'gpu' => $phone['GPU'],
-    'ram' => $phone['RAM Memory'],
-    'rom' => $phone['ROM Memory'],
+    'ram' => $phone['RAM_Memory'],
+    'rom' => $phone['ROM_Memory'],
+    'id' => $phone['id'],
 ]);
 include './component/review_form.php' 
 
@@ -59,6 +60,4 @@ include './component/review_form.php'
 
 <?php
 include './component/html_end.php';
-// print_r($phone["id"]);
-// echo $_GET['id']
 ?>

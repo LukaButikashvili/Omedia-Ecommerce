@@ -11,9 +11,16 @@ include './component/html_head.php';
 include './component/navbar.php';
 ?>
 
+<div class="container mt-2">
+    <?php if(isset($_SESSION['type']) && $_SESSION['type'] == 'admin'):?>
 
-<div class="container">
-    <div class="row">
+        <a href="/Omedia-Ecommerce/product_add.php" class="d-flex justify-content-end">
+                <button class="btn btn-success">Add Product</button>
+        </a>
+
+    <?php endif ?>
+    
+    <div class="row mt-2">
         <?php foreach ($data['phones'] as $item) : ?>
             <?php include_template(
                 'productCard.php',

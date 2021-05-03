@@ -7,7 +7,6 @@ require './component/html_head.php';
 require './component/navbar.php';
 include './common/include.php';
 $data = include_product_data();
-echo count($_SESSION['cart']);
 ?>
 <?php
 if (isset($_POST['remove'])) {
@@ -61,8 +60,7 @@ if (isset($_POST['remove'])) {
                                     <td>
                                         <div class="price-wrap">
                                             <var class="price"><?php echo $product['Price'] . "₾" ?></var>
-                                            <!-- <small class="text-muted"> $315.20 each </small> -->
-                                        </div> <!-- price-wrap .// -->
+                                        </div>
                                     </td>
                                     <form method="post">
                                         <td class="text-right">
