@@ -7,6 +7,11 @@ require './component/html_head.php';
 require './component/navbar.php';
 include './common/include.php';
 $data = include_product_data();
+
+//Loads coupon data
+$coupon_data = file_get_contents('./data/coupons.json');
+$coupons = json_decode($coupon_data, true)['coupons'];
+
 ?>
 <?php
 if (isset($_POST['remove'])) {
@@ -20,7 +25,17 @@ if (isset($_POST['remove'])) {
         $total[] = $product['Price'];
     }
     $total = array_sum($total);
-    $discount = 10;
+
+    //Checks if the entered coupon is correct
+    $discount = 0;
+    if (isset($_GET['couponCode'])) {
+        foreach ($coupons as $item) {
+            if ($item == $_GET['couponCode']) {
+                $discount = 10;
+            }
+        }
+    }
+
     $discount_price = ($total / 100) * $discount;
 }
 
@@ -81,9 +96,9 @@ if (isset($_POST['remove'])) {
                             <div class="form-group">
                                 <label>Have coupon?</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" name="" placeholder="Coupon code">
+                                    <input type="text" class="form-control" name="couponCode" id="couponCode" placeholder="Coupon code">
                                     <span class="input-group-append">
-                                        <button class="btn btn-primary">Apply</button>
+                                        <button class="btn btn-primary" id="couponApply">Apply</button>
                                     </span>
                                 </div>
                             </div>
@@ -116,6 +131,7 @@ if (isset($_POST['remove'])) {
                 </div>
             </aside>
         </div>
+        <script src="createCoupon.js"></script>
 
         <?php
         require './component/html_end.php'
