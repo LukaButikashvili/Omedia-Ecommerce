@@ -12,28 +12,32 @@ include './component/navbar.php';
 ?>
 
 <div class="container mt-2">
-    <?php if(isset($_SESSION['type']) && $_SESSION['type'] == 'admin'):?>
-
-        <a href="/Omedia-Ecommerce/product_add.php" class="d-flex justify-content-end">
+    <div class="row justify-content-end">
+        <?php if (isset($_SESSION['type']) && $_SESSION['type'] == 'admin') : ?>
+            <a href="/Omedia-Ecommerce/coupon_create.php">
+                <button class="btn btn-secondary">Create a Coupon</button>
+            </a>
+            <a href="/Omedia-Ecommerce/product_add.php" class="d-flex justify-content-end">
                 <button class="btn btn-success">Add Product</button>
-        </a>
-
-    <?php endif ?>
-    
-    <div class="row mt-2">
-        <?php foreach ($data['phones'] as $item) : ?>
-            <?php include_template(
-                'productCard.php',
-                [
-                    'image_link' => $item['img'],
-                    'phone_name' => $item['name'],
-                    'phone_price' => $item['Price'],
-                    'id' => $item['id'],
-                    'brand' => $item['brand']
-                ]
-            ) ?>
-        <?php endforeach; ?>
+            </a>
     </div>
+
+<?php endif ?>
+
+<div class="row mt-2">
+    <?php foreach ($data['phones'] as $item) : ?>
+        <?php include_template(
+            'productCard.php',
+            [
+                'image_link' => $item['img'],
+                'phone_name' => $item['name'],
+                'phone_price' => $item['Price'],
+                'id' => $item['id'],
+                'brand' => $item['brand']
+            ]
+        ) ?>
+    <?php endforeach; ?>
+</div>
 </div>
 <?php
 include './component/html_end.php'
