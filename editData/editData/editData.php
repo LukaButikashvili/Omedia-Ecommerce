@@ -18,7 +18,7 @@ foreach($array_data as $key => $phone) {
     }
 }
 
-// add new product data same img and review kew/values
+// adding same img and review key/values into new product data
 $updated_data['img'] = $product_old_data['img'];
 $updated_data['review'] = $product_old_data['review'];
 

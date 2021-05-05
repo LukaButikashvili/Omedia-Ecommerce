@@ -26,7 +26,7 @@
               <!-- logic is missing :) I am going to add it after login/register system is done/ Lekso -->
               <?php if(isset($_SESSION['username'])):?>
                 <a class="dropdown-item" href="#">Profile</a>
-                <a class="dropdown-item" href="#">Account settings</a>
+                <a class="dropdown-item" href="<?php echo ('/Omedia-Ecommerce/' . "accountSettings/accountSettingsPage.php") ?>">Account settings</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="<?php echo ('/Omedia-Ecommerce/' . "signout.php") ?>">Sign out</a>
               <?php else: ?>

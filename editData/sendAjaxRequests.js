@@ -35,14 +35,18 @@ $('.edit-button').click(function() {
     let buttonText = $('.edit-button').text();
 
     if(buttonText === "Edit Product" ) {
-        //disable other buttons
-        $('.delete-button').prop('disabled', true);
-        $('#addToCart').prop('disabled', true);
+        //hide other buttons
+        $('.delete-button').hide();
+        $('#addToCart').hide();
+
+        //create Cancel Edit button to reset changes
+        $("#change-buttons-main-div").append('<button type="cancel-changes" id="resetChanges" class="btn bg-secondary text-light ml-5">Reset Changes</button>');
 
 
-        $(this).text('Save');
+        //change button text "Edit Product" to "Save Changes"
+        $(this).text('Save Changes');
     
-        //changes element from p to input with proper name values
+        //changes elements from p, h1 to input with proper name values
         $('#name').replaceWith("<input type='text' id="+ $('#name').attr('id') +" class='form-control mb-2' value='" + $('#name').text() +"'>");
         $('#Price').replaceWith("<input type='text' id="+ $('#Price').attr('id') + " class='form-control' value=" + $('#Price').text() +">");
         $('.col-sm-9').map(function () { 
@@ -77,13 +81,13 @@ $('.edit-button').click(function() {
             }
         });
 
-        //enable buttons
-        $('.delete-button').prop('disabled', false);
-        $('#addToCart').prop('disabled', false);
-
         //restart page
         window.location.replace(window.location.href);
+
     }
-
-
 })
+
+
+$(document).on('click', '#resetChanges', function(){
+    window.location.replace(window.location.href);
+});
