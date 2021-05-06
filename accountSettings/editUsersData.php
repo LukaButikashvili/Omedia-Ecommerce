@@ -4,20 +4,20 @@ $updated_data = $_POST;
 session_start();
 
 // get json data
-$data = file_get_contents('../users.json');
+$data = file_get_contents('../data/users.json');
 $array_of_data = json_decode($data, true)['users'];
 
 $array = [];
 $array_key = null;
-foreach($array_of_data as $key => $user) {
-    if(password_verify($_POST['password'], $user['password']) && $_SESSION['username'] === $user['username']) {
+foreach ($array_of_data as $key => $user) {
+    if (password_verify($_POST['password'], $user['password']) && $_SESSION['username'] === $user['username']) {
         $array =  $user;
         $array_key = $key;
     }
 }
 
 //check if Previous Password is correct
-if(password_verify($_POST['password'], $array['password'])) {
+if (password_verify($_POST['password'], $array['password'])) {
     //updating users array
     $array['firstname'] = $_POST['firstname'];
     $array['lastname'] = $_POST['lastname'];
@@ -33,7 +33,7 @@ if(password_verify($_POST['password'], $array['password'])) {
     $convert_array_to_json = json_encode($updated_data);
 
     //upload new data to the json file
-    file_put_contents('../users.json', $convert_array_to_json);
+    file_put_contents('../data/users.json', $convert_array_to_json);
 
     //change session username and session password
     session_start();
