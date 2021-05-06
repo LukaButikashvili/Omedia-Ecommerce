@@ -1,20 +1,20 @@
 <?php
-    include '../component/html_head.php';
-    include '../component/navbar.php';
+include '../component/html_head.php';
+include '../component/navbar.php';
 
-    session_start();
-    if(isset($_SESSION['username'])):
-        // get whole json data
-        $data = file_get_contents('../users.json');
-        $array_data = json_decode($data, true)['users'];
-        
-        $new_array;
-        foreach($array_data as $user) {
-            if($user['username'] === $_SESSION['username']) {
-               // array_push($new_array, $user);
-                $new_array = $user;
-            }
+session_start();
+if (isset($_SESSION['username'])) :
+    // get whole json data
+    $data = file_get_contents('../data/users.json');
+    $array_data = json_decode($data, true)['users'];
+
+    $new_array;
+    foreach ($array_data as $user) {
+        if ($user['username'] === $_SESSION['username']) {
+            // array_push($new_array, $user);
+            $new_array = $user;
         }
+    }
 ?>
     <div class="container mt-5">
         <h1>Account Settings</h1>
@@ -42,8 +42,8 @@
             </div>
         </div>
     </div>
-    <?php else: 
-        http_response_code(401);
-    ?>
-        <h1>You are not allowed to access this Page</h1>
-    <?php endif ?>
+<?php else :
+    http_response_code(401);
+?>
+    <h1>You are not allowed to access this Page</h1>
+<?php endif ?>

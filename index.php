@@ -14,10 +14,10 @@ include './component/navbar.php';
 <div class="container mt-2">
     <div class="row justify-content-end">
         <?php if (isset($_SESSION['type']) && $_SESSION['type'] == 'admin') : ?>
-            <a href="/Omedia-Ecommerce/coupon_create.php">
+            <a href="/Omedia-Ecommerce/pages/coupon_create.php">
                 <button class="btn btn-secondary">Create a Coupon</button>
             </a>
-            <a href="/Omedia-Ecommerce/product_add.php" class="d-flex justify-content-end">
+            <a href="/Omedia-Ecommerce/pages/product_add.php" class="d-flex justify-content-end">
                 <button class="btn btn-success">Add Product</button>
             </a>
     </div>

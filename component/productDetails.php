@@ -5,7 +5,7 @@
         <aside class="col-md-6">
           <article class="gallery-wrap">
             <div class="img-big-wrap">
-              <a href="#" style="margin-top: 50px;"><img src="<?php echo "/Omedia-Ecommerce" . $image_link ?>" style="height: 500px;"></a>
+              <a href="#" style="margin-top: 50px;"><img src="<?php echo "/Omedia-Ecommerce/" . $image_link ?>" style="height: 500px;"></a>
             </div>
           </article>
         </aside>
@@ -46,7 +46,7 @@
             <?php
             if (isset($_SESSION['type'])) {
               if ($_SESSION['type'] == 'admin') {
-                include './editData/buttons.php';
+                include 'buttons.php';
               }
             }
             ?>

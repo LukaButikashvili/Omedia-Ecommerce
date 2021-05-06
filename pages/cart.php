@@ -3,13 +3,13 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 session_start();
 $_SESSION['cart'] = $_SESSION['cart'] ?? [];
-require './component/html_head.php';
-require './component/navbar.php';
-include './common/include.php';
+require '../component/html_head.php';
+require '../component/navbar.php';
+include '../common/include.php';
 $data = include_product_data();
 
 //Loads coupon data
-$coupon_data = file_get_contents('./data/coupons.json');
+$coupon_data = file_get_contents('../data/coupons.json');
 $coupons = json_decode($coupon_data, true)['coupons'];
 
 ?>
@@ -134,5 +134,5 @@ if (isset($_POST['remove'])) {
         <script src="createCoupon.js"></script>
 
         <?php
-        require './component/html_end.php'
+        require '../component/html_end.php'
         ?>

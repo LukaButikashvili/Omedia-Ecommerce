@@ -3,4 +3,4 @@
     <button type="edit" class="btn bg-warning  text-light edit-button ml-5" id=<?php echo $id ?>>Edit Product</button>
 </div>
 
-<script src="./editData/sendAjaxRequests.js"></script>
+<script src="../editData/sendAjaxRequests.js"></script>

@@ -5,7 +5,7 @@ $("#couponButton").click(function() {
     let coupon = $("#coupon").val()
     $.ajax({
         type: "POST",
-        url: "editData/editCoupon.php",
+        url: "../editData/editCoupon.php",
         data: {
             newCoupon: coupon,
             safetyCode:token

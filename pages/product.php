@@ -3,30 +3,30 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 session_start();
 $_SESSION['cart'] = $_SESSION['cart'] ?? [];
-include './component/html_head.php';
-include './component/navbar.php';
+include '../component/html_head.php';
+include '../component/navbar.php';
 ?>
 
 <?php
 if (!isset($_GET['id'])) {
-    include "component/not_found.php";
+    include "../component/not_found.php";
     exit;
 }
 ?>
 
 <?php
-require './common/include.php';
+require '../common/include.php';
 $productId = $_GET['id'];
 $product = getProductById($productId);
 if (!$product) {
-    include "component/not_found.php";
+    include "../component/not_found.php";
     exit;
 }
 ?>
 
 
 <?php
-include_once './common/include.php';
+include_once '../common/include.php';
 $data = include_product_data();
 $id = $_GET['id'];
 $phone;
@@ -37,8 +37,8 @@ foreach ($data['phones'] as $item) {
 }
 
 if (isset($_POST["add"])) {
-    $cart_element =& $_SESSION['cart'][$_POST['product_id']];
- }
+    $cart_element = &$_SESSION['cart'][$_POST['product_id']];
+}
 ?>
 
 <?php include_template('productDetails.php', [
@@ -54,10 +54,10 @@ if (isset($_POST["add"])) {
     'rom' => $phone['ROM_Memory'],
     'id' => $phone['id'],
 ]);
-include './component/review_form.php' 
+include '../component/review_form.php'
 
 ?>
 
 <?php
-include './component/html_end.php';
+include '../component/html_end.php';
 ?>
