@@ -18,6 +18,10 @@ if (isset($_SESSION['username'])) :
             // array_push($new_array, $user);
             $new_array = $user;
         }
+        if ($user['username'] === $_POST['username']) {
+            echo "Username already exist";
+            die(1);
+        }
     }
 ?>
     <div class="container mt-5">
@@ -52,3 +56,4 @@ if (isset($_SESSION['username'])) :
 ?>
     <h1>You are not allowed to access this Page</h1>
 <?php endif ?>
+<?php include '../component/html_end.php'; ?>

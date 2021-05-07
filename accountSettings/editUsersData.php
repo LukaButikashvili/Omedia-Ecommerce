@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if(!isset($_SESSION['csrf_token']) && !isset($_POST['csrf_token'])){
+if (!isset($_SESSION['csrf_token']) && !isset($_POST['csrf_token'])) {
     http_response_code(403);
     echo 'csrf token do not exist in your request';
     die(1);
@@ -10,7 +10,7 @@ if(!isset($_SESSION['csrf_token']) && !isset($_POST['csrf_token'])){
 var_dump($_POST);
 var_dump($_SESSION);
 
-if($_SESSION['csrf_token'] !== $_POST['csrf_token'] ){
+if ($_SESSION['csrf_token'] !== $_POST['csrf_token']) {
     http_response_code(403);
     echo 'csrf token do not macth';
     die(1);
@@ -28,6 +28,10 @@ foreach ($array_of_data as $key => $user) {
     if (password_verify($_POST['password'], $user['password']) && $_SESSION['username'] === $user['username']) {
         $array =  $user;
         $array_key = $key;
+    }
+    if ($user['username'] === $_POST['username']) {
+        echo "Username already exists";
+        die(1);
     }
 }
 

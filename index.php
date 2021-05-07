@@ -8,6 +8,7 @@ $_SESSION['cart'] = $_SESSION['cart'] ?? [];
 include './common/include.php';
 $data = include_product_data();
 include_template('html_head.php', ['title' => 'Home']);
+$product_count = count($data['phones']);
 
 include './component/navbar.php';
 
@@ -22,23 +23,23 @@ include './component/navbar.php';
             <a href="/Omedia-Ecommerce/pages/product_add.php" class="ml-5">
                 <button class="btn btn-success">Add Product</button>
             </a>
+        <?php endif ?>
     </div>
-<?php endif ?>
-
-<div class="row mt-2">
-    <?php foreach ($data['phones'] as $item) : ?>
-        <?php include_template(
-            'productCard.php',
-            [
-                'image_link' => $item['img'],
-                'phone_name' => $item['name'],
-                'phone_price' => $item['Price'],
-                'id' => $item['id'],
-                'brand' => $item['brand']
-            ]
-        ) ?>
-    <?php endforeach; ?>
-</div>
+    <?php include './component/title.php' ?>
+    <div class="row mt-2">
+        <?php foreach ($data['phones'] as $item) : ?>
+            <?php include_template(
+                'productCard.php',
+                [
+                    'image_link' => $item['img'],
+                    'phone_name' => $item['name'],
+                    'phone_price' => $item['Price'],
+                    'id' => $item['id'],
+                    'brand' => $item['brand']
+                ]
+            ) ?>
+        <?php endforeach; ?>
+    </div>
 </div>
 <?php
 include './component/html_end.php'
