@@ -1,10 +1,14 @@
 <?php
+session_start();
 include '../component/html_head.php';
 include '../component/navbar.php';
 
-session_start();
+//creating csrf token
+$csrf_token = base64_encode(random_bytes(10));
+$_SESSION['csrf_token'] = $csrf_token;
+
 if (isset($_SESSION['username'])) :
-    // get whole json data
+    // get json data
     $data = file_get_contents('../data/users.json');
     $array_data = json_decode($data, true)['users'];
 
@@ -37,6 +41,7 @@ if (isset($_SESSION['username'])) :
                         <label for="releaseDate">Password</label>
                         <input type="password" name="password" class="form-control">
                     </div>
+                    <input type="hidden" name="csrf_token" value=<?php echo $csrf_token ?>>
                     <button type="submit" class="btn btn-primary">Change User</button>
                 </form>
             </div>

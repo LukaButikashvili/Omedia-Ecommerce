@@ -1,7 +1,24 @@
 <?php
 
-include_once "../../common/addItemToData.php";
+//checking csrf token
+session_start();
+if(!isset($_SESSION['csrf_token']) && !isset($_POST['csrf_token'])){
+    http_response_code(403);
+    echo 'csrf token do not exist in your request';
+    die(1);
+}
 
+var_dump($_POST);
+var_dump($_SESSION);
+
+if($_SESSION['csrf_token'] !== $_POST['csrf_token'] ){
+    http_response_code(403);
+    echo 'csrf token do not macth';
+    die(1);
+}
+
+
+include_once "../../common/addItemToData.php";
 
 // Check if the form was submitted
 
@@ -27,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (file_exists("images/" . $filename)) {
                 echo $filename . " is already exists.";
             } else {
-                move_uploaded_file($_FILES["photo"]["tmp_name"], "images/" . $filename);
+                move_uploaded_file($_FILES["photo"]["tmp_name"], "../../images/" . $filename);
                 echo "Your file was uploaded successfully.";
 
                 //create new project array and add img file path to it

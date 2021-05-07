@@ -1,6 +1,20 @@
 <?php
+    session_start();
+    //if Guest tries to access this page
+    if (!isset($_SESSION['type'])) {
+        echo '<h1> You are not authorized </h1>';
+        http_response_code(401);
+        die(1);
+    }
+    
+    //if a USER, which is not an ADMIN tries to access this page
+    if ($_SESSION['type'] !== 'admin') {
+        echo '<h1> You do not have access to this Page </h1>';
+        http_response_code(403);
+        die(1);
+    }
 
-
+    //fetch products
     $data = file_get_contents('../../data/products.json');
     $array_data = json_decode($data, true)['phones'];
 

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "../component/html_head.php";
 include "../component/navbar.php";
 

@@ -1,7 +1,22 @@
 <?php
 
-$updated_data = $_POST;
 session_start();
+if(!isset($_SESSION['csrf_token']) && !isset($_POST['csrf_token'])){
+    http_response_code(403);
+    echo 'csrf token do not exist in your request';
+    die(1);
+}
+
+var_dump($_POST);
+var_dump($_SESSION);
+
+if($_SESSION['csrf_token'] !== $_POST['csrf_token'] ){
+    http_response_code(403);
+    echo 'csrf token do not macth';
+    die(1);
+}
+
+$updated_data = $_POST;
 
 // get json data
 $data = file_get_contents('../data/users.json');

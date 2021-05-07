@@ -41,11 +41,11 @@
             <hr>
             <form method="POST" action="">
               <input type="hidden" name="product_id" value="<?php echo $_GET['id'] ?>">
-              <button class="btn  btn-primary" name="add" type="submit"> Add to cart</button>
+              <button class="btn  btn-primary" name="add" type="submit" id="addToCart"> Add to cart</button>
             </form>
             <?php
             if (isset($_SESSION['type'])) {
-              if ($_SESSION['type'] == 'admin') {
+              if ($_SESSION['type'] === 'admin') {
                 include 'buttons.php';
               }
             }

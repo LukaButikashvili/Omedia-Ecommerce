@@ -3,6 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 session_start();
 include './common/include.php';
+$_SESSION['cart'] = $_SESSION['cart'] ?? [];
 $data = include_product_data();
 ?>
 
@@ -12,12 +13,12 @@ include './component/navbar.php';
 ?>
 
 <div class="container mt-2">
-    <div class="row justify-content-end">
+    <div class="row justify-content-end mb-3 mt-4 mr-1">
         <?php if (isset($_SESSION['type']) && $_SESSION['type'] == 'admin') : ?>
             <a href="/Omedia-Ecommerce/pages/coupon_create.php">
                 <button class="btn btn-secondary">Create a Coupon</button>
             </a>
-            <a href="/Omedia-Ecommerce/pages/product_add.php" class="d-flex justify-content-end">
+            <a href="/Omedia-Ecommerce/pages/product_add.php" class="ml-5">
                 <button class="btn btn-success">Add Product</button>
             </a>
     </div>
