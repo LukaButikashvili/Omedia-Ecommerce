@@ -1,8 +1,8 @@
 <?php
 
- //if Guest tries to access this page
- session_start();
- if (!isset($_SESSION['type'])) {
+//if Guest tries to access this page
+session_start();
+if (!isset($_SESSION['type'])) {
     echo '<h1> You are not authorized </h1>';
     http_response_code(401);
     die(1);
@@ -26,8 +26,8 @@ $product_old_data = [];
 $get_index_of_modified_product = null;
 
 
-foreach($array_data as $key => $phone) {
-    if($phone['id'] === $updated_data['id']) {
+foreach ($array_data as $key => $phone) {
+    if ($phone['id'] == $updated_data['id']) {
         $product_old_data = $phone;
         $get_index_of_modified_product = $key;
     }
@@ -56,4 +56,3 @@ $convert_array_to_json = json_encode($updated_data);
 
 //upload new data to the json file
 file_put_contents('../../data/products.json', $convert_array_to_json);
-
