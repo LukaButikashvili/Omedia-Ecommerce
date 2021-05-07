@@ -18,6 +18,8 @@ Our Website will help you to find the phone of your dreams, Happy Shopping!
   To do this, open your system command-line editor in the Omedia-Ecommerce/data folder and type `sudo chmod a+rw <filename>`.
 - You are ready to go! The project can be accessed at the url: localhost/Omedia-Ecommerce.
 
+- When adding products, you have to place it's image in the images folder.
+
 # Features
 
 - Admin
