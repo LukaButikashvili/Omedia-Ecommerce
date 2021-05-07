@@ -24,4 +24,6 @@ require '../component/navbar.php';
     <script src="createCoupon.js"></script>
 </body>
 
+<?php include "../component/html_end.php" ?>
+
 </html>
