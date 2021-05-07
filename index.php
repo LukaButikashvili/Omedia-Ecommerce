@@ -10,6 +10,7 @@ $data = include_product_data();
 include_template('html_head.php', ['title' => 'Home']);
 
 include './component/navbar.php';
+
 ?>
 
 <div class="container mt-2">
@@ -22,7 +23,6 @@ include './component/navbar.php';
                 <button class="btn btn-success">Add Product</button>
             </a>
     </div>
-
 <?php endif ?>
 
 <div class="row mt-2">

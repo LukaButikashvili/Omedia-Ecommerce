@@ -80,7 +80,7 @@ if (isset($_POST['remove'])) {
                                             <div class="input-group-append">
                                                 <button class="btn btn-light" type="button" id="button-minus"> &minus; </button>
                                             </div>
-                                        </div> <!-- col.// -->
+                                        </div> col.//
                                     </td>
                                     <td>
                                         <div class="price-wrap">
