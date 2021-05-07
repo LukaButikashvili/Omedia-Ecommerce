@@ -18,6 +18,10 @@ if (isset($_SESSION['username'])) :
             // array_push($new_array, $user);
             $new_array = $user;
         }
+        if($user['username'] === $_POST['username']) {
+            echo "Username already exist";    
+            die(1);
+        }
     }
 ?>
     <div class="container mt-5">

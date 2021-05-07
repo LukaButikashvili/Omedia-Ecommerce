@@ -8,8 +8,6 @@ if(!isset($_SESSION['csrf_token']) && !isset($_POST['csrf_token'])){
     die(1);
 }
 
-var_dump($_POST);
-var_dump($_SESSION);
 
 if($_SESSION['csrf_token'] !== $_POST['csrf_token'] ){
     http_response_code(403);
