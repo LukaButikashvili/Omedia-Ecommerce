@@ -72,14 +72,8 @@ if (isset($_POST['remove'])) {
                                         </figure>
                                     </td>
                                     <td>
-                                    <div class="input-group mb-3 input-spinner">
-                                            <div class="input-group-prepend">
-                                                <button class="btn btn-light" type="button" id="button-plus"> + </button>
-                                            </div>
+                                        <div class="input-group mb-3 input-spinner">
                                             <input type="text" class="form-control" value="1">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-light" type="button" id="button-minus"> &minus; </button>
-                                            </div>
                                         </div> <!-- col.// -->
                                     </td>
                                     <td>
@@ -143,8 +137,8 @@ if (isset($_POST['remove'])) {
         </div>
     </div>
 </section>
-        <script src="createCoupon.js"></script>
+<script src="createCoupon.js"></script>
 
-        <?php
-        require '../component/html_end.php'
-        ?>
+<?php
+require '../component/html_end.php'
+?>
