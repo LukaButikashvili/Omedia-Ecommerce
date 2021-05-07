@@ -7,9 +7,6 @@ if (!isset($_SESSION['csrf_token']) && !isset($_POST['csrf_token'])) {
     die(1);
 }
 
-var_dump($_POST);
-var_dump($_SESSION);
-
 if ($_SESSION['csrf_token'] !== $_POST['csrf_token']) {
     http_response_code(403);
     echo 'csrf token do not macth';
@@ -55,9 +52,6 @@ if (password_verify($_POST['password'], $array['password'])) {
     session_unset();
     $_SESSION['username'] = $array['username'];
     $_SESSION['type'] = $array['type'];
-
-    var_dump($array);
-    var_dump($convert_array_to_json);
 
     //redirect
     header("Location: http://localhost/Omedia-Ecommerce");
