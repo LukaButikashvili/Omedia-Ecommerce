@@ -8,7 +8,7 @@ $("#submitReview").click(function() {
     if (text) {
         $.ajax({
             type: "POST",
-            url: "editData/editReview.php",
+            url: "../editData/editReview.php",
             data: {
                 review: JSON.stringify(text),
                 id: id

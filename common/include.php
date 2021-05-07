@@ -3,7 +3,7 @@
 // fetchs data and converts json to associative array
 function get_config()
 {
-    return json_decode(file_get_contents('config/config.json'), true);
+    return json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/Omedia-Ecommerce/config/config.json'), true);
 }
 
 
@@ -12,7 +12,7 @@ function include_template($template_name, $variable = [], $print = true)
     $output = null;
 
     $component_path = get_config()['component-path'];
-    $file_path = $component_path . '/' . $template_name;
+    $file_path = $_SERVER['DOCUMENT_ROOT'] . "/Omedia-Ecommerce/" . $component_path . '/' . $template_name;
 
     if (file_exists($file_path)) {
         extract($variable);

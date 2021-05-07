@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-const USERS_FILE = "users.json";
+const USERS_FILE = "../data/users.json";
 
 function read_users()
 {
@@ -26,7 +26,7 @@ function register_user($firstname, $lastname, $username, $password)
     $newUsersArr['users'] = $users; // New array ['users'] for json
 
     file_put_contents(USERS_FILE, json_encode($newUsersArr)); // Write new user to file
-    header('Location: http://localhost/Omedia-Ecommerce/login.php');
+    header('Location: http://localhost/Omedia-Ecommerce/pages/login.php');
     die(0);
 }
 

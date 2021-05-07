@@ -3,7 +3,7 @@
         <header class="mb-4">
             <h4 class="card-title">Sign up</h4>
         </header>
-        <form method="post" action="register.php">
+        <form method="post" action="../pages/register.php">
             <div class="form-row">
                 <div class="col form-group">
                     <label>First name</label>
@@ -35,5 +35,5 @@
     </article><!-- card-body.// -->
 </div>
 <div class="text-center mt-4">
-    Already have an account? <a href="<?php echo ('/Omedia-Ecommerce/' . "login.php") ?>">Login</a>
+    Already have an account? <a href="<?php echo ('/Omedia-Ecommerce/pages/' . "login.php") ?>">Login</a>
 </div>

@@ -6,26 +6,11 @@ $('.delete-button').click(function() {
         url: 'http://localhost/Omedia-Ecommerce/editData/deleteData/deleteData.php',
         data: {'id': id},
         success: function(data) {
-            console.log(data);
+            //restart page
+            window.location.replace('http://localhost/Omedia-Ecommerce/index.php');
         }
     });
 
-    window.location.replace('http://localhost/Omedia-Ecommerce/index.php');
-})
-
-
-$('.delete-button').click(function() {
-    var id = $(this).attr('id');
-    $.ajax({
-        type: "POST",
-        url: 'http://localhost/Omedia-Ecommerce/editData/deleteData/deleteData.php',
-        data: {'id': id},
-        success: function(data) {
-            console.log(data);
-        }
-    });
-
-    window.location.replace('http://localhost/Omedia-Ecommerce/index.php');
 })
 
 
@@ -35,16 +20,24 @@ $('.edit-button').click(function() {
     let buttonText = $('.edit-button').text();
 
     if(buttonText === "Edit Product" ) {
-        //disable other buttons
-        $('.delete-button').prop('disabled', true);
-        $('#addToCart').prop('disabled', true);
+        //hide other buttons
+        $('.delete-button').hide();
+        $('#addToCart').hide();
+
+        //create "Reset Changes" Edit button to reset changes
+        $("#change-buttons-main-div").append('<button type="cancel-changes" id="resetChanges" class="btn bg-secondary text-light ml-5">Reset Changes</button>');
 
 
-        $(this).text('Save');
+        //change button text "Reset Changes" to "Save Changes"
+        $(this).text('Save Changes');
     
-        //changes element from p to input with proper name values
+        //changes elements from p, h1 to input with proper name values
         $('#name').replaceWith("<input type='text' id="+ $('#name').attr('id') +" class='form-control mb-2' value='" + $('#name').text() +"'>");
+        $("#name").before( "<dt class='col-sm-3'>Name</dt>" );
+
         $('#Price').replaceWith("<input type='text' id="+ $('#Price').attr('id') + " class='form-control' value=" + $('#Price').text() +">");
+        $("#Price").before( "<dt class='col-sm-3'>Price</dt>" );
+        
         $('.col-sm-9').map(function () { 
             return  $(this).replaceWith( "<input type='text' id="+  $(this).attr('id') + " class='form-control mb-2' value='" + $(this).text() +"'>" );
         });
@@ -73,17 +66,16 @@ $('.edit-button').click(function() {
             url: 'http://localhost/Omedia-Ecommerce/editData/editData/editData.php',
             data: {'data': updatedProduct},
             success: function(data) {
-                console.log(data);
+                //restart page
+                window.location.replace(window.location.href);
             }
         });
 
-        //enable buttons
-        $('.delete-button').prop('disabled', false);
-        $('#addToCart').prop('disabled', false);
 
-        //restart page
-        window.location.replace(window.location.href);
     }
-
-
 })
+
+
+$(document).on('click', '#resetChanges', function(){
+    window.location.replace(window.location.href);
+});

@@ -3,11 +3,21 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 session_start();
 $_SESSION['cart'] = $_SESSION['cart'] ?? [];
-require './component/html_head.php';
-require './component/navbar.php';
-include './common/include.php';
+
+include '../common/include.php';
+include_template('html_head.php', ['title' => 'Cart']);
+
+require '../component/navbar.php';
+
 $data = include_product_data();
 
+<<<<<<< HEAD:cart.php
+=======
+//Loads coupon data
+$coupon_data = file_get_contents('../data/coupons.json');
+$coupons = json_decode($coupon_data, true)['coupons'];
+
+>>>>>>> 7493e1fa61ff1ea692151d4680277e9aa0934065:pages/cart.php
 ?>
 <?php
 if (isset($_POST['remove'])) {
@@ -21,7 +31,17 @@ if (isset($_POST['remove'])) {
         $total[] = $product['Price'];
     }
     $total = array_sum($total);
-    $discount = 10;
+
+    //Checks if the entered coupon is correct
+    $discount = 0;
+    if (isset($_GET['couponCode'])) {
+        foreach ($coupons as $item) {
+            if ($item == $_GET['couponCode']) {
+                $discount = 10;
+            }
+        }
+    }
+
     $discount_price = ($total / 100) * $discount;
 }
 
@@ -88,9 +108,9 @@ if (isset($_POST['remove'])) {
                             <div class="form-group">
                                 <label>Have coupon?</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" name="" placeholder="Coupon code">
+                                    <input type="text" class="form-control" name="couponCode" id="couponCode" placeholder="Coupon code">
                                     <span class="input-group-append">
-                                        <button class="btn btn-primary">Apply</button>
+                                        <button class="btn btn-primary" id="couponApply">Apply</button>
                                     </span>
                                 </div>
                             </div>
@@ -123,8 +143,16 @@ if (isset($_POST['remove'])) {
                 </div>
             </aside>
         </div>
+<<<<<<< HEAD:cart.php
     </div>
 </section>
 <?php
 require './component/html_end.php'
 ?>
+=======
+        <script src="createCoupon.js"></script>
+
+        <?php
+        require '../component/html_end.php'
+        ?>
+>>>>>>> 7493e1fa61ff1ea692151d4680277e9aa0934065:pages/cart.php
