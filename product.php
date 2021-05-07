@@ -37,8 +37,8 @@ foreach ($data['phones'] as $item) {
 }
 
 if (isset($_POST["add"])) {
-    $cart_element =& $_SESSION['cart'][$_POST['product_id']];
- }
+    $cart_element = &$_SESSION['cart'][$_POST['product_id']];
+}
 ?>
 
 <?php include_template('productDetails.php', [
@@ -54,7 +54,7 @@ if (isset($_POST["add"])) {
     'rom' => $phone['ROM_Memory'],
     'id' => $phone['id'],
 ]);
-include './component/review_form.php' 
+include './component/review_form.php'
 
 ?>
 

@@ -1,6 +1,10 @@
 <?php
+session_start();
+ini_set('display_errors', '1');
 include "./component/html_head.php";
 include "./component/navbar.php";
+
+
 
 ?>
 <?php if (empty($_POST)) : 

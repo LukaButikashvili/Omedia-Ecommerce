@@ -7,6 +7,7 @@ require './component/html_head.php';
 require './component/navbar.php';
 include './common/include.php';
 $data = include_product_data();
+
 ?>
 <?php
 if (isset($_POST['remove'])) {
@@ -34,7 +35,7 @@ if (isset($_POST['remove'])) {
                         <thead class="text-muted">
                             <tr class="small text-uppercase">
                                 <th scope="col">Product</th>
-                                <th scope="col" width="120">Quantity</th>
+                                <th scope="col" width="160">Quantity</th>
                                 <th scope="col" width="120">Price</th>
                                 <th scope="col" class="text-right" width="150"> </th>
                             </tr>
@@ -53,9 +54,15 @@ if (isset($_POST['remove'])) {
                                         </figure>
                                     </td>
                                     <td>
-                                        <select class="form-control">
-                                            <option>1</option>
-                                        </select>
+                                        <div class="input-group mb-3 input-spinner">
+                                            <div class="input-group-prepend">
+                                                <button class="btn btn-light" type="button" id="button-plus"> + </button>
+                                            </div>
+                                            <input type="text" class="form-control" value="1">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-light" type="button" id="button-minus"> &minus; </button>
+                                            </div>
+                                        </div> <!-- col.// -->
                                     </td>
                                     <td>
                                         <div class="price-wrap">
@@ -107,7 +114,7 @@ if (isset($_POST['remove'])) {
                                 <dd class="text-right text-dark b"><strong><?php echo ($total - $discount_price) . "₾" ?></strong></dd>
                             </dl>
                         <?php endif ?>
-                        <hr>
+                        <hr style="margin-top: 2.2rem;">
                         <p class="text-center mb-3">
                             <img src="https://bootstrap-ecommerce.com/bootstrap-ecommerce-html/images/misc/payments.png" height="26">
                         </p>
@@ -116,7 +123,8 @@ if (isset($_POST['remove'])) {
                 </div>
             </aside>
         </div>
-
-        <?php
-        require './component/html_end.php'
-        ?>
+    </div>
+</section>
+<?php
+require './component/html_end.php'
+?>

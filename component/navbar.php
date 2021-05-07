@@ -11,7 +11,7 @@
          <ul class="navbar-nav ml-auto mr-sm-2 mt-2 mt-lg-0">
            <li class="nav-item">
              <a class="nav-link" href="<?php echo ('/Omedia-Ecommerce/' . "cart.php") ?>"><img src="./images/icons/shopping_cart_black_24dp.svg" alt=""><sup><div style="width: 14px;height: 14px;border-radius: 50%;font-size: 10px;color: #fff;
-             line-height: 14px;text-align: center;background: red;float: right;margin-left: -10px;"><?php echo count($_SESSION['cart'])?></div></sup></a>
+             line-height: 14px;text-align: center;background: red;float: right;margin-left: -10px;"><?php echo (isset($_SESSION['cart'])? (count($_SESSION['cart'])) :  "0") ?></div></sup></a>
            </li>
          </ul>
 
