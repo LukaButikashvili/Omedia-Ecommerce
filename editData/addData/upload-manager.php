@@ -52,6 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 //add product data to products.json
                 addItemToData('../../data/products.json', $new_product_data, 'phones');
+                header("Location: http://localhost/Omedia-Ecommerce");
             }
         } else {
             echo "Error: There was a problem uploading your file. Please try again.";

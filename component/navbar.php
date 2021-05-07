@@ -12,7 +12,7 @@
            <li class="nav-item">
              <a class="nav-link" href="<?php echo ('/Omedia-Ecommerce/pages/' . "cart.php") ?>"><img src="http://localhost/Omedia-Ecommerce/images/icons/shopping_cart_black_24dp.svg" alt=""><sup>
                  <div style="width: 14px;height: 14px;border-radius: 50%;font-size: 10px;color: #fff;
-             line-height: 14px;text-align: center;background: red;float: right;margin-left: -10px;"><?php echo count($_SESSION['cart']) ?></div>
+             line-height: 14px;text-align: center;background: red;float: right;margin-left: -10px;"><?php echo (isset($_SESSION['cart'])? (count($_SESSION['cart'])) :  "0") ?></div>
                </sup></a>
            </li>
          </ul>
@@ -23,7 +23,6 @@
                <img src="http://localhost/Omedia-Ecommerce/images/icons/account_circle_black_24dp.svg" alt="">
              </a>
              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-               <!-- logic is missing :) I am going to add it after login/register system is done/ Lekso -->
                <?php if (isset($_SESSION['username'])) : ?>
                  <a class="dropdown-item" href=<?php echo ('/Omedia-Ecommerce/pages/' . "user_page.php") ?>>Profile</a>
                  <a class="dropdown-item" href=<?php echo ('/Omedia-Ecommerce/' . "accountSettings/accountSettingsPage.php") ?>>Account settings <img src="http://localhost/Omedia-Ecommerce/images/icons/manage_accounts_black_24dp.svg" alt=""> </a>
