@@ -39,7 +39,9 @@ foreach ($data['phones'] as $item) {
 
 if (isset($_POST["add"])) {
     $cart_element = &$_SESSION['cart'][$_POST['product_id']];
+    header("Location: " . $_SERVER['REQUEST_URI']);    
 }
+
 ?>
 
 <?php include_template('productDetails.php', [

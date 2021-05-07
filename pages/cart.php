@@ -11,17 +11,15 @@ require '../component/navbar.php';
 
 $data = include_product_data();
 
-<<<<<<< HEAD:cart.php
-=======
 //Loads coupon data
 $coupon_data = file_get_contents('../data/coupons.json');
 $coupons = json_decode($coupon_data, true)['coupons'];
 
->>>>>>> 7493e1fa61ff1ea692151d4680277e9aa0934065:pages/cart.php
 ?>
 <?php
 if (isset($_POST['remove'])) {
     unset($_SESSION['cart'][$_POST['remove']]);
+    header("Location: " . $_SERVER['REQUEST_URI']);
 }
 ?>
 
@@ -74,7 +72,7 @@ if (isset($_POST['remove'])) {
                                         </figure>
                                     </td>
                                     <td>
-                                        <div class="input-group mb-3 input-spinner">
+                                    <div class="input-group mb-3 input-spinner">
                                             <div class="input-group-prepend">
                                                 <button class="btn btn-light" type="button" id="button-plus"> + </button>
                                             </div>
@@ -136,23 +134,17 @@ if (isset($_POST['remove'])) {
                         <?php endif ?>
                         <hr style="margin-top: 2.2rem;">
                         <p class="text-center mb-3">
-                            <img src="https://bootstrap-ecommerce.com/bootstrap-ecommerce-html/images/misc/payments.png" height="26">
+                            <img src="../images/icons/payments.png" height="26">
                         </p>
                         <a href="#" class="btn btn-primary btn-block"> Make Purchase </a>
                     </div>
                 </div>
             </aside>
         </div>
-<<<<<<< HEAD:cart.php
     </div>
 </section>
-<?php
-require './component/html_end.php'
-?>
-=======
         <script src="createCoupon.js"></script>
 
         <?php
         require '../component/html_end.php'
         ?>
->>>>>>> 7493e1fa61ff1ea692151d4680277e9aa0934065:pages/cart.php

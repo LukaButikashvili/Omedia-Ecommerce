@@ -39,7 +39,7 @@ if (isset($_SESSION['username'])) :
                     </div>
                     <div class="form-group">
                         <label for="releaseDate">Password</label>
-                        <input type="password" name="password" class="form-control">
+                        <input type="password" name="password" class="form-control" required>
                     </div>
                     <input type="hidden" name="csrf_token" value=<?php echo $csrf_token ?>>
                     <button type="submit" class="btn btn-primary">Change User</button>

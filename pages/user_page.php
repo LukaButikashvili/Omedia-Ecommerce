@@ -13,3 +13,7 @@ include '../component/navbar.php';
 <div class="d-flex justify-content-center mt-5">
     <h1>Hello <?php echo $_SESSION['username'] ?></h1>
 </div>
+
+<?php
+include '../component/html_end.php'
+?>
