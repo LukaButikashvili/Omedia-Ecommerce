@@ -1,14 +1,14 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-session_start();
-include './common/include.php';
-$_SESSION['cart'] = $_SESSION['cart'] ?? [];
-$data = include_product_data();
-?>
 
-<?php
-include './component/html_head.php';
+session_start();
+$_SESSION['cart'] = $_SESSION['cart'] ?? [];
+
+include './common/include.php';
+$data = include_product_data();
+include_template('html_head.php', ['title' => 'Home']);
+
 include './component/navbar.php';
 ?>
 

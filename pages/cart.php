@@ -3,9 +3,12 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 session_start();
 $_SESSION['cart'] = $_SESSION['cart'] ?? [];
-require '../component/html_head.php';
-require '../component/navbar.php';
+
 include '../common/include.php';
+include_template('html_head.php', ['title' => 'Cart']);
+
+require '../component/navbar.php';
+
 $data = include_product_data();
 
 //Loads coupon data

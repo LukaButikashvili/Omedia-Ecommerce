@@ -5,7 +5,9 @@
 ?>
 
 <?php
-    include '../component/html_head.php';
+    include '../common/include.php';
+    include_template('html_head.php', ['title' => 'addProduct']);
+    
     include '../component/navbar.php';
 ?>
     <div class="container-sm mt-3">
@@ -13,9 +15,8 @@
             <div class="card-body">
                 <form action="../editData/addData/upload-manager.php" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                        <!-- <img src="images/logo/defaultimage.png" alt="default-image" class="img-thumbnail"> -->
                         <label for="phoneName">Upload Photo</label>
-                        <input type="file" id="fileSelect" name="photo" required>
+                        <input class="form-control-file" type="file" id="fileSelect" name="photo" required>
                         <p><strong>Note:</strong> Only .jpg, .jpeg, .gif, .png formats allowed to a max size of 5 MB.</p>
                     </div>
                     <div class="form-group">

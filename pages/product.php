@@ -3,7 +3,10 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 session_start();
 $_SESSION['cart'] = $_SESSION['cart'] ?? [];
-include '../component/html_head.php';
+
+include '../common/include.php';
+include_template('html_head.php', ['title' => 'Product Details']);
+
 include '../component/navbar.php';
 ?>
 
@@ -15,7 +18,6 @@ if (!isset($_GET['id'])) {
 ?>
 
 <?php
-require '../common/include.php';
 $productId = $_GET['id'];
 $product = getProductById($productId);
 if (!$product) {
@@ -26,7 +28,6 @@ if (!$product) {
 
 
 <?php
-include_once '../common/include.php';
 $data = include_product_data();
 $id = $_GET['id'];
 $phone;

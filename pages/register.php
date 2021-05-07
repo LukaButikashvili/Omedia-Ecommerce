@@ -13,8 +13,10 @@ if (!empty($_POST)) {
 }
 ?>
 <?php
-include "../component/html_head.php";
-include "../component/navbar.php";
+include '../common/include.php';
+include_template('html_head.php', ['title' => 'Register']);
+
+require '../component/navbar.php';
 include "../component/registration_form.php"
 
 ?>

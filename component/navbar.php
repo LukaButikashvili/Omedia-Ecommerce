@@ -25,7 +25,7 @@
              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                <!-- logic is missing :) I am going to add it after login/register system is done/ Lekso -->
                <?php if (isset($_SESSION['username'])) : ?>
-                 <a class="dropdown-item" href="#">Profile</a>
+                 <a class="dropdown-item" href=<?php echo ('/Omedia-Ecommerce/pages/' . "user_page.php") ?>>Profile</a>
                  <a class="dropdown-item" href=<?php echo ('/Omedia-Ecommerce/' . "accountSettings/accountSettingsPage.php") ?>>Account settings <img src="http://localhost/Omedia-Ecommerce/images/icons/manage_accounts_black_24dp.svg" alt=""> </a>
                  <div class="dropdown-divider"></div>
                  <a class="dropdown-item" href="<?php echo ('/Omedia-Ecommerce/pages/' . "signout.php") ?>">Sign out <img src="http://localhost/Omedia-Ecommerce/images/icons/logout_black_24dp.svg" alt=""> </a>

@@ -1,8 +1,9 @@
 <?php
 session_start();
-include "../component/html_head.php";
-include "../component/navbar.php";
+include '../common/include.php';
+include_template('html_head.php', ['title' => 'Login']);
 
+require '../component/navbar.php';
 ?>
 <?php if (empty($_POST)) :
     include '../component/login_form.php';
