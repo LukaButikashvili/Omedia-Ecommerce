@@ -18,6 +18,6 @@
         </div>
     </div>
     <div class="mt-4 text-center">
-        Don't have an account? <a href=" <?php echo ('/Omedia-Ecommerce/' . "register.php") ?>">Create One</a>
+        Don't have an account? <a href=" <?php echo ('/Omedia-Ecommerce/pages/' . "register.php") ?>">Create One</a>
     </div>
 </section>
