@@ -26,6 +26,10 @@ foreach ($array_of_data as $key => $user) {
         $array =  $user;
         $array_key = $key;
     }
+    if($_POST['username'] === $user['username'] && $array_key && $array_key !== $key) {
+        echo 'username already exist, please try other one';
+        die(1);
+    }
 }
 
 //check if Previous Password is correct

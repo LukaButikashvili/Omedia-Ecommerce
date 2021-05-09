@@ -1,6 +1,8 @@
 <?php
 session_start();
-include '../component/html_head.php';
+include '../common/include.php';
+include_template('../component/html_head.php', ['title' => 'User Settings']);
+
 include '../component/navbar.php';
 
 //creating csrf token
@@ -17,10 +19,6 @@ if (isset($_SESSION['username'])) :
         if ($user['username'] === $_SESSION['username']) {
             // array_push($new_array, $user);
             $new_array = $user;
-        }
-        if ($user['username'] === $_POST['username']) {
-            echo "Username already exist";
-            die(1);
         }
     }
 ?>
