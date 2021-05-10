@@ -8,6 +8,8 @@ include '../common/include.php';
 include_template('html_head.php', ['title' => 'Product Details']);
 
 include '../component/navbar.php';
+
+
 ?>
 
 <?php
