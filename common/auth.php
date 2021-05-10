@@ -50,6 +50,14 @@ function login($username, $password)
     }
     echo '<script>alert("User with this username doesn\'t exist ");</script>';
 }
+function unique_username($username){
+    $users = read_users();
+    foreach($users as $user){
+        if($user['username'] === $username){
+            return true;
+        }
+    }
+}
 function logout()
 {
     session_unset();

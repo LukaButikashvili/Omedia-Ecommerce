@@ -40,7 +40,7 @@ foreach ($data['phones'] as $item) {
 }
 
 if (isset($_POST["add"])) {
-    $cart_element = &$_SESSION['cart'][$_POST['product_id'] - 1];
+    $cart_element = &$_SESSION['cart'][$_POST['product_id']- 1];
     header("Location: " . $_SERVER['REQUEST_URI']);
 }
 
