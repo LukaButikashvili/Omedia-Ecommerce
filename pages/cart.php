@@ -72,7 +72,7 @@ if (isset($_POST['remove'])) {
                                         </figure>
                                     </td>
                                     <td>
-                                        <div class="input-group mb-3 input-spinner">
+                                    <div class="input-group mb-3 input-spinner">
                                             <input type="text" class="form-control" value="1">
                                         </div> <!-- col.// -->
                                     </td>

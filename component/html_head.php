@@ -14,6 +14,6 @@
     type="text/css" />
 
   <link href="https://bootstrap-ecommerce.com/assets/css/style.css?v=2.0" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+  
 </head>
 <body>
